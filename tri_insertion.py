@@ -1,3 +1,4 @@
+import random
 def tri_insertion(T):
     comparaisons = 0
     affectations = 0
@@ -20,7 +21,7 @@ tri = tri_insertion(tab)
 print("nombre de comparaisons :", tri[0])
 print("nombre d'affectations :", tri[1])
 print("résultat :", tri[2])
-print("_____________________________________")
+print("_______________________________________________________________")
 
 
 pire_cas = sorted(tab, reverse=True)
@@ -30,7 +31,7 @@ tri = tri_insertion(pire_cas)
 print("nombre de comparaisons :", tri[0])
 print("nombre d'affectations :", tri[1])
 print("résultat :", tri[2])
-print("_____________________________________")
+print("______________________________________________________________")
 
 meilleur_cas = sorted(tab)
 
@@ -39,4 +40,6 @@ tri = tri_insertion(meilleur_cas)
 print("nombre de comparaisons :", tri[0])
 print("nombre d'affectations :", tri[1])
 print("résultat :", tri[2])
-print("_____________________________________")
+print("______________________________________________________________")
+
+print(random.randrange(1, 1000))

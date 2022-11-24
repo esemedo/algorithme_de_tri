@@ -1,10 +1,17 @@
 """
-Pour i parcourant tous le tableau:
-    Pour j  allant de 0 à la longueur du tableau - i - 1:
-        si tableau [j] est supérieur à tableau [j + 1] :
-            tableau[j] = tableau[j + 1]
-            tableau[j + 1] = tableau[j]
-
+Algorithme de tri à bulles normal
+Début
+    Pour i parcourant tous le tableau:
+        Pour j  allant de 0 à la longueur du tableau - i - 1:
+            si tableau [j] est supérieur à tableau [j + 1] :
+                valeur = tableau[j]
+                tableau[j] = tableau[j + 1]
+                tableau[j + 1] = valeur
+            fin si
+        fin pour
+    fin pour
+    Retourner le tableau trié
+Fin
 
 """
 import random

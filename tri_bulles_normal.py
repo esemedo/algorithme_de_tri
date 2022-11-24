@@ -24,7 +24,7 @@ def tri_bulles(tab):
             if tab[j] > tab[j+1]:
                 (tab[j], tab[j+1]) = (tab[j+1], tab[j])
                 cpt_aff += 3
-    print("compteur de comparaison", cpt_comp, '/ compteur d\'affectations', cpt_aff)
+    print("compteur de comparaison", cpt_comp, '/ compteur d\'affectations', cpt_aff, '\ncoût algorithmique :', cpt_aff + cpt_comp)
     return tab
 
 tab = [random.randint(1,100) for _ in range(11)]

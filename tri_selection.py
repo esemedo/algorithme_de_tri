@@ -82,9 +82,9 @@ def tri_selection3(tab):
                 min = j # On le considère comme nouveau minimum
         tab[i], tab[min] = tab[min], tab[i] # On échange les deux éléments
         nb_echange += 3
-
     print("Le nombre de comparaison est de : ", nb_compa, "et le nombre d'échange est de : ", nb_echange)
     print("le meilleur cas :",tab)
+    return ""
     
 
 print(tri_selection3(tab))

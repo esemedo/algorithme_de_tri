@@ -28,19 +28,16 @@ def tri_bulles(tab):
     return tab
 
 tab = [random.randint(1,100) for _ in range(11)]
+pire = sorted(tab, reverse=True)
+meilleur = sorted(tab)
+
+#Résultat
 print('tableau aléatoire\n',tab)
 print('tri ordinaire -->',tri_bulles(tab))
 
-#Résultat
-tab3 = [random.randint(1,100) for _ in range(10)]
-tab3.sort()
-tab_trie = tab3
-print('\n --- meilleur cas --- \n',tab_trie)
-print('meilleure cas trie -->',tri_bulles(tab_trie))
+print('\n --- meilleur cas --- \n',meilleur)
+print('meilleure cas trie -->',tri_bulles(meilleur))
 
-tab2 = tab = [random.randint(1,100) for _ in range(10)]
-tab2.sort(reverse = True)
-tab_pire = tab2
-print('\n ---- pire cas ---- \n', tab_pire)
-print('pire cas trié -->',tri_bulles(tab_pire))
+print('\n ---- pire cas ---- \n', pire)
+print('pire cas trié -->',tri_bulles(pire))
 

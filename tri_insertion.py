@@ -26,7 +26,12 @@ def tri_insertion(T):
         T[A + 1] = x
     return (comparaisons, affectations, T)
 
-tab = [2, 7, 9, 90, 67, 45, 78, 24, 45, 89, 48, 3, 8, 99]
+tab = []
+i = 1
+for i in range(1, 31):
+    i += 1
+
+    tab.append(random.randrange(1, 1000))
 
 print("Cas aléatoire")
 tri = tri_insertion(tab)

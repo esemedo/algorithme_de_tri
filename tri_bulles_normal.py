@@ -37,8 +37,3 @@ tab_pire = tab2
 print('\n ---- pire cas ---- \n', tab_pire)
 print('pire cas trié -->',tri_bulles(tab_pire))
 
-a = 2
-b = 1
-a = b
-
-b = a

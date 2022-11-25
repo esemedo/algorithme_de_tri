@@ -1,0 +1,61 @@
+Algorithme de tri par sélection
+
+procédure tri_selection(tableau t)
+      n ← longueur(t)
+      pour i de 0 à n - 2
+          min ← i
+          pour j de i + 1 à n - 1
+              si t[j] < t[min], alors min ← j
+          fin pour
+      fin pour
+  fin procédure
+
+-------------
+
+Fonction tri_insertion(T)
+
+       pour taille de 1 à taille de T - 1
+            x égal T[taille]
+
+            A égal taille
+
+            tant que j est plus grand que 0 et T[A - 1] plus grand que x
+                     T[A] égal T[A - 1]
+                     A égal A- 1
+
+            T[A] égal x
+
+---------------
+
+Algorithme de tri à bulles normal
+Début
+    Pour i parcourant tous le tableau:
+        Pour j  allant de 0 à la longueur du tableau - i - 1:
+            si tableau [j] est supérieur à tableau [j + 1] :
+                valeur = tableau[j]
+                tableau[j] = tableau[j + 1]
+                tableau[j + 1] = valeur
+            fin si
+        fin pour
+    fin pour
+    Retourner le tableau trié
+Fin
+
+----------------
+
+Algorithme tri à bulle optimisé
+
+tri-bulle-opti (tableau)
+début
+    longueur = longueur de tableau
+    pour i allant jusqu'a longueur
+        tableau_trie = vrai
+        pour j allant de 0 à longueur-i-1
+            si tableau[j+1] < tableau[j]
+                inverser l'ordre de tableau[j+1] et tableau[j]
+                tableau_trie = faux
+            fin si
+        fin pour
+        si tableau_trie = vrai
+            fin tri-bulle-opti
+    fin pour

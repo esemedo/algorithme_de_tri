@@ -1,21 +1,3 @@
-"""
-Algorithme tri à bulle optimisé
-
-tri-bulle-opti (tableau)
-début
-    longueur = longueur de tableau
-    pour i allant jusqu'a longueur
-        tableau_trie = vrai
-        pour j allant de 0 à longueur-i-1
-            si tableau[j+1] < tableau[j]
-                inverser l'ordre de tableau[j+1] et tableau[j]
-                tableau_trie = faux
-            fin si
-        fin pour
-        si tableau_trie = vrai
-            fin tri-bulle-opti
-    fin pour
-"""
 def tri_a_bulle_opti(tableau):
     length = len(tableau)
     compteur_comparaison = 0
@@ -30,7 +12,6 @@ def tri_a_bulle_opti(tableau):
                 tableau_trie = False
         if tableau_trie:
             cout_algo = compteur_comparaison + compteur_affectation
-            #print(f"Coût algorithmique : {cout_algo}")
             return cout_algo
 """
 test = [4, 35, 77, 124, 4235, 43, 7, 54, 97, 42, 1, 65]

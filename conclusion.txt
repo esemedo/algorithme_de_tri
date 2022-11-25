@@ -1,0 +1,4 @@
+Groupe de : Alexandre, Charles-Henry, Elisa, Mehdi
+
+On remarque que le meilleur tri est le tri à bulle optimisé, de très loin, l'augmentation du cout algorithmique n'est pas exponentielle.
+Le pire tri est le tri à insertion, tandis que le tri à bulle normal et le tri à sélection sont plus ou moins équivalent (le tri à bulle normal étant légèrement plus efficace).

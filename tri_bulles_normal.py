@@ -1,3 +1,4 @@
+import random
 def tri_bulles(tab):
     cpt_comp = 0
     cpt_aff = 0
@@ -8,7 +9,7 @@ def tri_bulles(tab):
                 cpt_aff += 3
                 (tab[j], tab[j+1]) = (tab[j+1], tab[j])
     return (cpt_aff + cpt_comp)
-"""
+
 tab = [random.randint(1,100) for _ in range(11)]
 pire = sorted(tab, reverse=True)
 meilleur = sorted(tab)
@@ -22,4 +23,3 @@ print('meilleure cas trie -->',tri_bulles(meilleur))
 
 print('\n ---- pire cas ---- \n', pire)
 print('pire cas trié -->',tri_bulles(pire))
-"""

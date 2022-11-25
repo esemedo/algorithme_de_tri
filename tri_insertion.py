@@ -1,3 +1,4 @@
+import random
 def tri_insertion(T):
     comparaisons = 0
     affectations = 0
@@ -11,39 +12,34 @@ def tri_insertion(T):
             A -= 1
         T[A + 1] = x
     return (comparaisons + affectations)
-"""
+
 tab = []
 i = 1
-for i in range(1, 31):
+for i in range(1, 10):
     i += 1
 
     tab.append(random.randrange(1, 1000))
 
 print("Cas aléatoire")
-tri = tri_insertion(tab)
-print("nombre de comparaisons :", tri[0])
-print("nombre d'affectations :", tri[1])
-print("résultat :", tri[2])
+tri = tab
+print(tri)
+print(tri_insertion(tri))
+print(tri)
 print("_______________________________________________________________")
 
 
 pire_cas = sorted(tab, reverse=True)
 
 print("Pire Cas")
-tri = tri_insertion(pire_cas)
-print("nombre de comparaisons :", tri[0])
-print("nombre d'affectations :", tri[1])
-print("résultat :", tri[2])
+print(pire_cas)
+print(tri_insertion(pire_cas))
+print(pire_cas)
 print("______________________________________________________________")
 
 meilleur_cas = sorted(tab)
 
 print("Meilleur Cas")
-tri = tri_insertion(meilleur_cas)
-print("nombre de comparaisons :", tri[0])
-print("nombre d'affectations :", tri[1])
-print("résultat :", tri[2])
+print(meilleur_cas)
+print(tri_insertion(meilleur_cas))
+print(meilleur_cas)
 print("______________________________________________________________")
-
-print(random.randrange(1, 1000))
-"""

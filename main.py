@@ -33,4 +33,4 @@ def stat(min, max, step, nbr):
                 print(moyenne)
                 f.write(f"{moyenne}\n")
 
-stat(12, 122, 7, 100)
+stat(10, 20, 5, 10)

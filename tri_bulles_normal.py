@@ -11,15 +11,19 @@ def tri_bulles(tab):
     return (cpt_aff + cpt_comp)
 
 tab = [random.randint(1,100) for _ in range(11)]
+
 pire = sorted(tab, reverse=True)
 meilleur = sorted(tab)
-
 #Résultat
-print('tableau aléatoire\n',tab)
-print('tri ordinaire -->',tri_bulles(tab))
+with open ('tri_bulles_normal_result.txt','w') as f :
+    f.write(f"--- tableau aléatoire ---\n {tab}\n")
+    f.write(f"coût algorithmique : {tri_bulles(tab)}\n")
+    f.write(f"tableau aléatoire trié --> {tab}\n")
 
-print('\n --- meilleur cas --- \n',meilleur)
-print('meilleure cas trie -->',tri_bulles(meilleur))
+    f.write(f"\n --- meilleur cas --- \n {meilleur}\n")
+    f.write(f"coût algorithmique : {tri_bulles(meilleur)}\n")
+    f.write(f"meilleure cas trie --> {meilleur}\n")
 
-print('\n ---- pire cas ---- \n', pire)
-print('pire cas trié -->',tri_bulles(pire))
+    f.write(f"\n ---- pire cas ---- \n {pire}\n")
+    f.write(f"coût algorithmique :  {tri_bulles(pire)}\n")
+    f.write(f"pire cas trié -->' {pire}\n")

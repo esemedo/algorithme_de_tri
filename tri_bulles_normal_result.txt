@@ -1,0 +1,14 @@
+--- tableau aléatoire ---
+ [68, 2, 98, 7, 50, 63, 61, 96, 33, 34, 99]
+coût algorithmique : 124
+tableau aléatoire trié --> [2, 7, 33, 34, 50, 61, 63, 68, 96, 98, 99]
+
+ --- meilleur cas --- 
+ [2, 7, 33, 34, 50, 61, 63, 68, 96, 98, 99]
+coût algorithmique : 55
+meilleure cas trie --> [2, 7, 33, 34, 50, 61, 63, 68, 96, 98, 99]
+
+ ---- pire cas ---- 
+ [99, 98, 96, 68, 63, 61, 50, 34, 33, 7, 2]
+coût algorithmique :  220
+pire cas trié -->' [2, 7, 33, 34, 50, 61, 63, 68, 96, 98, 99]

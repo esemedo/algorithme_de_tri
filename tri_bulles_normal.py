@@ -22,11 +22,11 @@ def tri_bulles(tab):
         for j in range(len(tab)-i-1):
             cpt_comp += 1
             if tab[j] > tab[j+1]:
-                (tab[j], tab[j+1]) = (tab[j+1], tab[j])
                 cpt_aff += 3
-    print("compteur de comparaison", cpt_comp, '/ compteur d\'affectations', cpt_aff, '\ncoût algorithmique :', cpt_aff + cpt_comp)
-    return tab
-
+                (tab[j], tab[j+1]) = (tab[j+1], tab[j])
+    #print("compteur de comparaison", cpt_comp, '/ compteur d\'affectations', cpt_aff, '\ncoût algorithmique :', cpt_aff + cpt_comp)
+    return (cpt_aff + cpt_comp)
+"""
 tab = [random.randint(1,100) for _ in range(11)]
 pire = sorted(tab, reverse=True)
 meilleur = sorted(tab)
@@ -40,4 +40,4 @@ print('meilleure cas trie -->',tri_bulles(meilleur))
 
 print('\n ---- pire cas ---- \n', pire)
 print('pire cas trié -->',tri_bulles(pire))
-
+"""

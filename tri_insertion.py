@@ -15,17 +15,16 @@ def tri_insertion(T):
     comparaisons = 0
     affectations = 0
     for taille in range(1, len(T)):
-        comparaisons += 1
         x = T[taille]
-
         A = taille - 1
+        comparaisons += 1
         while A >= 0 and x < T[A]:
             affectations += 3
             T[A + 1] = T[A]
             A -= 1
         T[A + 1] = x
-    return (comparaisons, affectations, T)
-
+    return (comparaisons + affectations)
+"""
 tab = []
 i = 1
 for i in range(1, 31):
@@ -60,3 +59,4 @@ print("résultat :", tri[2])
 print("______________________________________________________________")
 
 print(random.randrange(1, 1000))
+"""

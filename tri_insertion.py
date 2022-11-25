@@ -1,4 +1,5 @@
 import random
+tri_insertion_result_file = "tri_insertion_result.txt"
 def tri_insertion(T):
     comparaisons = 0
     affectations = 0
@@ -13,33 +14,31 @@ def tri_insertion(T):
         T[A + 1] = x
     return (comparaisons + affectations)
 
+with open(tri_insertion_result_file, 'w') as f:
+    f.write("")
 tab = []
 i = 1
 for i in range(1, 10):
     i += 1
 
     tab.append(random.randrange(1, 1000))
-
-print("Cas aléatoire")
 tri = tab
-print(tri)
-print(tri_insertion(tri))
-print(tri)
-print("_______________________________________________________________")
-
-
 pire_cas = sorted(tab, reverse=True)
-
-print("Pire Cas")
-print(pire_cas)
-print(tri_insertion(pire_cas))
-print(pire_cas)
-print("______________________________________________________________")
-
 meilleur_cas = sorted(tab)
 
-print("Meilleur Cas")
-print(meilleur_cas)
-print(tri_insertion(meilleur_cas))
-print(meilleur_cas)
-print("______________________________________________________________")
+
+with open(tri_insertion_result_file, 'a') as f:
+    f.write("Cas aléatoire\n")
+    f.write(f"{tri}\n")
+    f.write(f"Cout algoritmique : {tri_insertion(tri)}\n")
+    f.write(f"{tri}\n")
+    f.write("_______________________________________________________________\n")
+    f.write("Pire Cas\n")
+    f.write(f"{pire_cas}\n")
+    f.write(f"Cout algoritmique : {tri_insertion(pire_cas)}\n")
+    f.write(f"{pire_cas}\n")
+    f.write("______________________________________________________________\n")
+    f.write("Meilleur Cas\n")
+    f.write(f"{meilleur_cas}\n")
+    f.write(f"Cout algoritmique : {tri_insertion(meilleur_cas)}\n")
+    f.write(f"{meilleur_cas}\n")

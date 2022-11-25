@@ -1,3 +1,5 @@
+tri_selection_result_file = "tri_selection_result.txt"
+
 def tri_selection(tab):
     nb_compa = 0
     nb_echange = 0
@@ -11,23 +13,25 @@ def tri_selection(tab):
         nb_echange += 3
     return (nb_compa + nb_echange)
 
-
+with open(tri_selection_result_file, 'w') as f:
+    f.write("")
 tab = [1,10,291,2829,10,2903,20,9300,0,20, 11]
 
 best_case = sorted(tab)
 worst_case = sorted(tab, reverse=True)
-print('--------------')
-print('Test Algo')
-print(tab)
-print(tri_selection(tab))
-print(tab)
-print('--------------')
-print('Meilleur des cas')
-print(best_case)
-print(tri_selection(best_case))
-print(best_case)
-print('--------------')
-print('Pire des cas')
-print(worst_case)
-print(tri_selection(worst_case))
-print(worst_case)
+with open(tri_selection_result_file, 'a') as f:
+    f.write('--------------\n')
+    f.write('Test Algo\n')
+    f.write(f"{tab}")
+    f.write(f"Cout algoritmique : {tri_selection(tab)}\n")
+    f.write(f"{tab}\n")
+    f.write('--------------\n')
+    f.write('Meilleur des cas\n')
+    f.write(f"{best_case}\n")
+    f.write(f"Cout algoritmique : {tri_selection(best_case)}\n")
+    f.write(f"{best_case}\n")
+    f.write('--------------\n')
+    f.write('Pire des cas\n')
+    f.write(f"{worst_case}\n")
+    f.write(f"Cout algoritmique : {tri_selection(worst_case)}\n")
+    f.write(f"{worst_case}\n")
